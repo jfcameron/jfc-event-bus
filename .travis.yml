@@ -66,7 +66,7 @@ matrix:
             - doxygen
       script:
         - |
-          cd workspace
+          cd workspace;git submodule update --init --recursive
           cmake .. -DJFC_BUILD_DEMO=OFF -DJFC_BUILD_DOCS=ON -DJFC_BUILD_TESTS=OFF
           mv docs ~
           REMOTE_URL=$(git config --get remote.origin.url | sed -e "s/^https:\/\///")
