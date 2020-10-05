@@ -1,1 +1,0 @@
-simple message bus implementation
