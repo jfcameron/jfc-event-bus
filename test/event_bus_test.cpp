@@ -9,8 +9,6 @@
 
 TEST_CASE("event_bus", "[jfc::event_bus]")
 {
-
-    //REQUIRE(bus);
     SECTION("add an observer and observe an event")
     {
         struct event
