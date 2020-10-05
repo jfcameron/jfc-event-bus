@@ -1,5 +1,5 @@
-# © 2019 Joseph Cameron - All Rights Reserved
-# gdk-graphics ci script
+# © 2020 Joseph Cameron - All Rights Reserved
+# jfc-event_bus ci script
 
 dist: bionic 
 sudo: required
