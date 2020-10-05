@@ -52,7 +52,7 @@ matrix:
       script: 
         - |
           cd workspace
-          cmake .. -G "MinGW Makefiles" -DJFC_BUILD_DOCS=OFF -DCMAKE_CXX_FLAGS="-pedantic -Wall -Wextra -Ofast -flto -funroll-loops -m64 -march=native" -DCMAKE_SH="CMAKE_SH-NOTFOUND"
+          cmake .. -G "MinGW Makefiles" -DJFC_BUILD_DOCS=OFF -DCMAKE_CXX_FLAGS="-pedantic -Wall -Wextra -Ofast -flto -funroll-loops -m64 -march=native"
           cmake --build .
 
     # Documentation 
