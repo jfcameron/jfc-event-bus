@@ -8,9 +8,9 @@ include("${CMAKE_CURRENT_SOURCE_DIR}/cmake/jfc-cmake/jfclib.cmake")
 
 option(JFC_BUILD_DEMO "Build the demo" ON)
 option(JFC_BUILD_DOCS "Build documentation" OFF)
-option(JFC_BUILD_TESTS "Build unit tests" OFF)
+option(JFC_BUILD_TESTS "Build unit tests" ON)
 
-add_subdirectory(thirdparty)
+#add_subdirectory(thirdparty)
 
 jfc_project(library
     NAME "jfceventbus"
@@ -29,6 +29,10 @@ jfc_project(library
     SOURCE_LIST
 		${CMAKE_CURRENT_SOURCE_DIR}/src/event_bus.cpp
 )
+
+if (JFC_BUILD_DEMO)
+    add_subdirectory(demo)
+endif()
 
 if (JFC_BUILD_TESTS)
     add_subdirectory(test)

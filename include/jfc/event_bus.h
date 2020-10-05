@@ -6,13 +6,14 @@
 #include <vector>
 #include <memory>
 #include <functional>
+#include <vector>
 
-namespace gdk
+namespace jfc 
 {
 	/// \brief mechanism for producers to push events to a certalized bus, 
     /// which are then seen by observers
 	template<class event_type_template>
-	class event_bus
+	class event_bus final
 	{
 	public:
 		using event_type = event_type_template;
@@ -24,12 +25,12 @@ namespace gdk
 		using observer_shared_ptr_type = std::shared_ptr<observer_type>;
 
 	private:
-		std::vector<observer_weak_ptr_type> m_Observers;
+		mutable std::vector<observer_weak_ptr_type> m_Observers;
 
 	public:
 		/// \brief notify all observers of the event
-		/// remove observers that are null
-		void propagate_event(event_type e)
+		/// \remark removes observers that are null
+		void propagate_event(event_type e) const
 		{
 			for (size_t i(0); i < m_Observers.size(); ++i)
 			{
@@ -49,6 +50,20 @@ namespace gdk
 		{
 			m_Observers.push_back(observer);
 		}
+
+        /// \brief explicit move semantics
+        event_bus<event_type> &operator=(event_bus<event_type> &&) = default;
+        /// \brief explicit move semantics
+        event_bus(event_bus<event_type> &&) = default;
+        
+        /// \brief explicit copy semantics
+        event_bus<event_type> &operator=(const event_bus<event_type> &) = default;
+        /// \brief explicit copy semantics
+        event_bus(const event_bus<event_type> &) = default;
+
+        event_bus() = default;
+
+        ~event_bus() = default;
 	};
 }
 
