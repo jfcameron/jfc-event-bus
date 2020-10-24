@@ -48,10 +48,10 @@ RM = /usr/local/cmake-3.12.4/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/travis/build/jfcameron/jfc-event-bus
+CMAKE_SOURCE_DIR = /home/travis/build/jfcameron/jfc-event_bus
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/travis/build/jfcameron/jfc-event-bus/workspace
+CMAKE_BINARY_DIR = /home/travis/build/jfcameron/jfc-event_bus/workspace
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -91,14 +91,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/travis/build/jfcameron/jfc-event-bus/workspace && $(CMAKE_COMMAND) -E cmake_progress_start /home/travis/build/jfcameron/jfc-event-bus/workspace/CMakeFiles /home/travis/build/jfcameron/jfc-event-bus/workspace/docs/CMakeFiles/progress.marks
-	cd /home/travis/build/jfcameron/jfc-event-bus/workspace && $(MAKE) -f CMakeFiles/Makefile2 docs/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/travis/build/jfcameron/jfc-event-bus/workspace/CMakeFiles 0
+	cd /home/travis/build/jfcameron/jfc-event_bus/workspace && $(CMAKE_COMMAND) -E cmake_progress_start /home/travis/build/jfcameron/jfc-event_bus/workspace/CMakeFiles /home/travis/build/jfcameron/jfc-event_bus/workspace/docs/CMakeFiles/progress.marks
+	cd /home/travis/build/jfcameron/jfc-event_bus/workspace && $(MAKE) -f CMakeFiles/Makefile2 docs/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/travis/build/jfcameron/jfc-event_bus/workspace/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/travis/build/jfcameron/jfc-event-bus/workspace && $(MAKE) -f CMakeFiles/Makefile2 docs/clean
+	cd /home/travis/build/jfcameron/jfc-event_bus/workspace && $(MAKE) -f CMakeFiles/Makefile2 docs/clean
 .PHONY : clean
 
 # The main clean target
@@ -108,17 +108,17 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/travis/build/jfcameron/jfc-event-bus/workspace && $(MAKE) -f CMakeFiles/Makefile2 docs/preinstall
+	cd /home/travis/build/jfcameron/jfc-event_bus/workspace && $(MAKE) -f CMakeFiles/Makefile2 docs/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/travis/build/jfcameron/jfc-event-bus/workspace && $(MAKE) -f CMakeFiles/Makefile2 docs/preinstall
+	cd /home/travis/build/jfcameron/jfc-event_bus/workspace && $(MAKE) -f CMakeFiles/Makefile2 docs/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/travis/build/jfcameron/jfc-event-bus/workspace && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/travis/build/jfcameron/jfc-event_bus/workspace && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Help Target
@@ -141,6 +141,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/travis/build/jfcameron/jfc-event-bus/workspace && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/travis/build/jfcameron/jfc-event_bus/workspace && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

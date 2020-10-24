@@ -1,4 +1,4 @@
-# Install script for directory: /home/travis/build/jfcameron/jfc-event-bus/docs
+# Install script for directory: /home/travis/build/jfcameron/jfc-event_bus/docs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
